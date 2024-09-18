@@ -42,7 +42,6 @@
 }
 
 body {
-  height: 100vh;
   font-family: "Red Hat Text", sans-serif;
   font-size: calc((16 / 16) * 1rem);
   font-weight: 400;
@@ -58,4 +57,22 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+h2 {
+  font-size: calc((40 / 16) * 1rem);
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: calc((20 / 16) * 1rem);
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 60rem) {
+  .app-container {
+    grid-template-columns: 1fr calc((400 / 16) * 1rem);
+  }
 }

@@ -1,0 +1,34 @@
+.productImageContainer {
+  position: relative;
+  margin-bottom: calc((20 / 16) * 1rem);
+}
+
+.productImage {
+  border-radius: calc((6 / 16) * 1rem);
+}
+
+.productImageContainer button {
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.productDescription {
+  font-size: calc((14 / 16) * 1rem);
+}
+
+.productLabel {
+  color: var(--rose-500);
+}
+
+.productTitle {
+  font-weight: 600;
+}
+
+.productPrice {
+  font-weight: 600;
+  color: var(--red);
+}
