@@ -1,4 +1,6 @@
-import image from "../assets/images/image-waffle-mobile.jpg";
+import mobileImage from "../assets/images/image-waffle-mobile.jpg";
+import tabletImage from "../assets/images/image-waffle-tablet.jpg";
+import desktopImage from "../assets/images/image-waffle-desktop.jpg";
 
 import styles from "./ProductCard.module.css";
 
@@ -6,11 +8,15 @@ function ProductCard() {
   return (
     <div>
       <div className={styles.productImageContainer}>
-        <img
-          className={styles.productImage}
-          src={image}
-          alt="Waffle with Berries"
-        />
+        <picture className={styles.productImage}>
+          <source srcSet={desktopImage} media="(min-width: 60rem" />
+          <source srcSet={tabletImage} media="(min-width: 40rem" />
+          <img
+            className={styles.productImage}
+            src={mobileImage}
+            alt="Waffle with Berries"
+          />
+        </picture>
         <button>
           <p>Add to Cart</p>
         </button>

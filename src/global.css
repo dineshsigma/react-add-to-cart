@@ -66,13 +66,32 @@ h2 {
 .app-container {
   min-height: 100vh;
   padding: calc((20 / 16) * 1rem);
+  max-width: calc((350 / 16) * 1rem);
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr;
 }
 
-@media only screen and (min-width: 60rem) {
+@media screen and (min-width: 40em) {
   .app-container {
+    max-width: calc((500 / 16) * 1rem);
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .app-container {
+    width: fit-content;
+    max-width: calc((1000 / 16) * 1rem);
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .app-container {
+    max-width: calc((1250 / 16) * 1rem);
+    margin: 4rem auto;
     grid-template-columns: 1fr calc((400 / 16) * 1rem);
+    column-gap: 2rem;
   }
 }

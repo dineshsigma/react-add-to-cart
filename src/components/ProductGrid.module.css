@@ -1,0 +1,19 @@
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: calc((30 / 16) * 1rem);
+}
+
+@media screen and (min-width: 40em) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+}

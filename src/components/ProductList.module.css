@@ -1,0 +1,15 @@
+.gridTitle {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 40em) {
+  .productSection {
+    max-width: calc((800 / 16) * 1rem);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .productSection {
+    max-width: calc((800 / 16) * 1rem);
+  }
+}
