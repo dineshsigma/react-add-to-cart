@@ -1,6 +1,6 @@
 .productImageContainer {
   position: relative;
-  margin-bottom: calc((25 / 16) * 1rem);
+  margin-bottom: calc((35 / 16) * 1rem);
 }
 
 .productImage {

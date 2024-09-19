@@ -2,6 +2,8 @@ import mobileImage from "../assets/images/image-waffle-mobile.jpg";
 import tabletImage from "../assets/images/image-waffle-tablet.jpg";
 import desktopImage from "../assets/images/image-waffle-desktop.jpg";
 
+import AddToCartButton from "./AddToCartButton";
+
 import styles from "./ProductCard.module.css";
 
 function ProductCard() {
@@ -17,9 +19,7 @@ function ProductCard() {
             alt="Waffle with Berries"
           />
         </picture>
-        <button>
-          <p>Add to Cart</p>
-        </button>
+        <AddToCartButton />
       </div>
       <div className={styles.productDescription}>
         <p className={styles.productLabel}>Waffle</p>
