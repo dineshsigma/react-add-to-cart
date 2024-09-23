@@ -75,6 +75,17 @@ function reducer(state, action) {
           }
         }),
       };
+    case "clear":
+      return {
+        ...state,
+        items: state.items.map((item) => {
+          if (item.name === action.payload) {
+            return { ...item, quantity: 0 };
+          } else {
+            return item;
+          }
+        }),
+      };
     default:
       throw new Error("Action unknown");
   }
