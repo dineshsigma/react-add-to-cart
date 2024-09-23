@@ -39,4 +39,17 @@
   border: 1.5px solid var(--rose-300);
   background-color: transparent;
   padding: 2px;
+  transition: border-color 0.3s;
+}
+
+.removeBtn svg path {
+  transition: fill 0.3s;
+}
+
+.removeBtn:hover {
+  border-color: var(--rose-900);
+}
+
+.removeBtn:hover svg path {
+  fill: var(--rose-900);
 }
