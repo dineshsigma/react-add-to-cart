@@ -9,7 +9,11 @@ function ProductCard({ item }) {
   return (
     <div>
       <div className={styles.productImageContainer}>
-        <picture className={styles.productImage}>
+        <picture
+          className={`${styles.productImage}  ${
+            item.quantity != 0 ? styles.selectedProduct : ""
+          }`}
+        >
           <source srcSet={item.image.desktop} media="(min-width: 60rem" />
           <source srcSet={item.image.tablet} media="(min-width: 40rem" />
           <img
@@ -18,7 +22,7 @@ function ProductCard({ item }) {
             alt="Waffle with Berries"
           />
         </picture>
-        <AddToCartButton />
+        <AddToCartButton quantity={item.quantity} />
       </div>
       <div className={styles.productDescription}>
         <p className={styles.productLabel}>{item.category}</p>

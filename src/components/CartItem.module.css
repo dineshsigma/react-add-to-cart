@@ -35,7 +35,6 @@
 }
 
 .removeBtn {
-  cursor: pointer;
   border-radius: 50%;
   border: 1.5px solid var(--rose-300);
   background-color: transparent;

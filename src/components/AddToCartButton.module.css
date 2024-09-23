@@ -1,12 +1,21 @@
-.button {
+.button,
+.buttonActive {
   width: max-content;
   font-size: calc((14 / 16) * 1rem);
   font-weight: 600;
   border-radius: 999rem;
   padding: 0.7rem 1.6rem;
+  transition: color 0.3s, border-color 0.3s;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.button {
   background-color: var(--rose-50);
   border: 0.06rem var(--rose-900) solid;
-  transition: color 0.3s, border-color 0.3s;
 
   display: flex;
   gap: 0.5rem;
@@ -15,4 +24,27 @@
 .button:hover {
   color: var(--red);
   border-color: var(--red);
+}
+
+.buttonActive {
+  background-color: var(--red);
+  border: 0.06rem var(--red) solid;
+  color: var(--rose-50);
+  width: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plusMinusBtn {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1.5px solid var(--rose-50);
+  background-color: transparent;
+  padding: 4px;
+}
+
+.plusMinusBtn:hover {
+  background-color: var(--rose-50);
 }

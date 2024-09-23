@@ -45,7 +45,6 @@
 }
 
 .confirmBtn {
-  cursor: pointer;
   background-color: var(--red);
   color: var(--rose-50);
   width: 100%;
