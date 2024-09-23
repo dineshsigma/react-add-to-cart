@@ -5,7 +5,7 @@ import importData from "../assets/data/data.json";
 
 // initial state of the application using the imported item data from the JSON file
 const initialState = {
-  items: [...importData.map((x) => ({ ...x, quantity: 1 }))],
+  items: [...importData.map((x) => ({ ...x, quantity: 0 }))],
   orderConfirmed: false,
 };
 console.log(initialState);

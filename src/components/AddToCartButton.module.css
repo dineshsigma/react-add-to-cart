@@ -45,6 +45,14 @@
   padding: 4px;
 }
 
+.plusMinusBtn svg {
+  display: block;
+}
+
 .plusMinusBtn:hover {
   background-color: var(--rose-50);
+}
+
+.plusMinusBtn:hover svg {
+  stroke: var(--red);
 }

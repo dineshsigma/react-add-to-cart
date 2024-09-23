@@ -3,8 +3,8 @@ import styles from "./AddToCartButton.module.css";
 import PropTypes from "prop-types";
 
 import cartImage from "../assets/images/icon-add-to-cart.svg";
-import incrementImage from "../assets/images/icon-increment-quantity.svg";
-import decrementImage from "../assets/images/icon-decrement-quantity.svg";
+import IconIncrementQuantity from "../assets/images/IconIncrementQuantity.svg";
+import IconDecrementQuantity from "../assets/images/IconDecrementQuantity.svg";
 
 function AddToCartButton({ quantity }) {
   if (quantity == 0) {
@@ -18,11 +18,11 @@ function AddToCartButton({ quantity }) {
     return (
       <div className={styles.buttonActive}>
         <button className={styles.plusMinusBtn}>
-          <img src={decrementImage} alt="-" />
+          <IconDecrementQuantity />
         </button>
         <p>{quantity}</p>
         <button className={styles.plusMinusBtn}>
-          <img src={incrementImage} alt="+" />
+          <IconIncrementQuantity />
         </button>
       </div>
     );
