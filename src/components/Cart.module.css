@@ -39,7 +39,7 @@
   justify-content: center;
 }
 
-.carbonNeutralBanner img {
+.carbonNeutralBanner svg {
   display: inline-block;
   margin-right: 0.4rem;
 }

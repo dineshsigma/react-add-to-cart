@@ -1,5 +1,5 @@
 import CartItem from "./CartItem";
-import carbonNeutralIcon from "../assets/images/icon-carbon-neutral.svg";
+import IconCarbonNeutral from "../assets/images/IconCarbonNeutral.svg";
 
 import styles from "./Cart.module.css";
 
@@ -21,7 +21,7 @@ function Cart() {
         <p>$46.50</p>
       </div>
       <div className={styles.carbonNeutralBanner}>
-        <img src={carbonNeutralIcon} alt="" />
+        <IconCarbonNeutral />
         <p>
           This is a <strong>carbon-neutral</strong> delivery
         </p>

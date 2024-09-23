@@ -67,6 +67,10 @@ button {
   cursor: pointer;
 }
 
+svg {
+  display: block;
+}
+
 .app-container {
   min-height: 100vh;
   padding: calc((20 / 16) * 1rem);

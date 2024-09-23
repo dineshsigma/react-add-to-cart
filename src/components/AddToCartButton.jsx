@@ -2,7 +2,7 @@ import styles from "./AddToCartButton.module.css";
 
 import PropTypes from "prop-types";
 
-import cartImage from "../assets/images/icon-add-to-cart.svg";
+import IconAddToCart from "../assets/images/IconAddToCart.svg";
 import IconIncrementQuantity from "../assets/images/IconIncrementQuantity.svg";
 import IconDecrementQuantity from "../assets/images/IconDecrementQuantity.svg";
 
@@ -10,7 +10,7 @@ function AddToCartButton({ quantity }) {
   if (quantity == 0) {
     return (
       <button className={styles.button}>
-        <img src={cartImage} alt="" />
+        <IconAddToCart />
         <span>Add to Cart</span>
       </button>
     );

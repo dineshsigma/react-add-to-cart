@@ -1,4 +1,4 @@
-import removeItemIcon from "../assets/images/icon-remove-item.svg";
+import IconRemoveItem from "../assets/images/IconRemoveItem.svg";
 
 import styles from "./CartItem.module.css";
 
@@ -14,7 +14,7 @@ function CartItem() {
         </p>
       </div>
       <button className={styles.removeBtn}>
-        <img src={removeItemIcon} alt="" />
+        <IconRemoveItem />
       </button>
     </div>
   );
