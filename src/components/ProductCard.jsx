@@ -22,7 +22,7 @@ function ProductCard({ item }) {
             alt="Waffle with Berries"
           />
         </picture>
-        <AddToCartButton quantity={item.quantity} />
+        <AddToCartButton quantity={item.quantity} name={item.name} />
       </div>
       <div className={styles.productDescription}>
         <p className={styles.productLabel}>{item.category}</p>

@@ -53,6 +53,28 @@ function reducer(state, action) {
   switch (action.type) {
     case "clickConfirm":
       return { ...state, orderConfirmed: !state.orderConfirmed };
+    case "increment":
+      return {
+        ...state,
+        items: state.items.map((item) => {
+          if (item.name === action.payload) {
+            return { ...item, quantity: item.quantity++ };
+          } else {
+            return item;
+          }
+        }),
+      };
+    case "decrement":
+      return {
+        ...state,
+        items: state.items.map((item) => {
+          if (item.name === action.payload) {
+            return { ...item, quantity: item.quantity-- };
+          } else {
+            return item;
+          }
+        }),
+      };
     default:
       throw new Error("Action unknown");
   }
