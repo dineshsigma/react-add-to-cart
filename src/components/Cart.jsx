@@ -37,7 +37,7 @@ function Cart() {
         </p>
       </div>
       <button
-        onClick={() => dispatch({ type: "clickConfirm" })}
+        onClick={() => dispatch({ type: "confirmOrder" })}
         className={styles.confirmBtn}
       >
         Confirm Order

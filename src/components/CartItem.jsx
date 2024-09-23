@@ -23,7 +23,7 @@ function CartItem({ item }) {
       </div>
       <button
         className={styles.removeBtn}
-        onClick={() => dispatch({ type: "clear", payload: item.name })}
+        onClick={() => dispatch({ type: "clearItem", payload: item.name })}
       >
         <IconRemoveItem />
       </button>

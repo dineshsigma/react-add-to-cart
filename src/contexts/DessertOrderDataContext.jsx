@@ -51,9 +51,9 @@ function useDessertOrderData() {
 // reducer function that contains the logic for updating the state
 function reducer(state, action) {
   switch (action.type) {
-    case "clickConfirm":
+    case "confirmOrder":
       return { ...state, orderConfirmed: !state.orderConfirmed };
-    case "increment":
+    case "incrementItem":
       return {
         ...state,
         items: state.items.map((item) => {
@@ -64,7 +64,7 @@ function reducer(state, action) {
           }
         }),
       };
-    case "decrement":
+    case "decrementItem":
       return {
         ...state,
         items: state.items.map((item) => {
@@ -75,7 +75,7 @@ function reducer(state, action) {
           }
         }),
       };
-    case "clear":
+    case "clearItem":
       return {
         ...state,
         items: state.items.map((item) => {

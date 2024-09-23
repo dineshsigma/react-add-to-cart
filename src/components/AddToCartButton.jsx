@@ -15,7 +15,7 @@ function AddToCartButton({ quantity, name }) {
     return (
       <button
         className={styles.button}
-        onClick={() => dispatch({ type: "increment", payload: name })}
+        onClick={() => dispatch({ type: "incrementItem", payload: name })}
       >
         <IconAddToCart />
         <span>Add to Cart</span>
@@ -26,14 +26,14 @@ function AddToCartButton({ quantity, name }) {
       <div className={styles.buttonActive}>
         <button
           className={styles.plusMinusBtn}
-          onClick={() => dispatch({ type: "decrement", payload: name })}
+          onClick={() => dispatch({ type: "decrementItem", payload: name })}
         >
           <IconDecrementQuantity />
         </button>
         <p>{quantity}</p>
         <button
           className={styles.plusMinusBtn}
-          onClick={() => dispatch({ type: "increment", payload: name })}
+          onClick={() => dispatch({ type: "incrementItem", payload: name })}
         >
           <IconIncrementQuantity />
         </button>
