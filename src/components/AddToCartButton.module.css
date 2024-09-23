@@ -49,6 +49,6 @@
   background-color: var(--rose-50);
 }
 
-.plusMinusBtn:hover svg {
-  stroke: var(--red);
+.plusMinusBtn:hover svg path {
+  fill: var(--red);
 }
