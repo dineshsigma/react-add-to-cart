@@ -52,3 +52,15 @@
   border: none;
   border-radius: 999rem;
 }
+
+.emptyCartContainer {
+  padding: 2rem 0 1rem;
+  font-size: calc((14 / 16) * 1rem);
+  font-weight: 600;
+  color: var(--rose-500);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
