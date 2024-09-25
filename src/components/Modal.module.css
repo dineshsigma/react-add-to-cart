@@ -4,8 +4,7 @@
   padding: 2rem 1.5rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
 }
 
 .checkMarkImage {
@@ -48,8 +47,9 @@
 
 @media screen and (min-width: 40em) {
   .modal {
+    margin-bottom: auto;
+    padding: 2rem;
     width: calc((600 / 16) * 1rem);
     border-radius: 1rem;
-    position: relative;
   }
 }
