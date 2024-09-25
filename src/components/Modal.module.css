@@ -1,4 +1,5 @@
 .modal {
+  width: 100%;
   background-color: var(--rose-50);
   padding: 2rem 1.5rem;
   border-top-left-radius: 1rem;
@@ -25,6 +26,7 @@
   background-color: var(--rose-100);
   border-radius: 0.5rem;
   padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .totalPrice {
@@ -42,4 +44,12 @@
 .totalPrice p:nth-child(2) {
   font-size: calc((20 / 16) * 1rem);
   font-weight: 700;
+}
+
+@media screen and (min-width: 40em) {
+  .modal {
+    width: calc((600 / 16) * 1rem);
+    border-radius: 1rem;
+    position: relative;
+  }
 }
