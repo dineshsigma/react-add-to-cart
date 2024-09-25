@@ -1,0 +1,49 @@
+.confirmedItem {
+  padding: 1rem 0;
+  border-bottom: 1.5px solid rgba(209, 209, 209, 0.295);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirmedItem img {
+  height: calc((50 / 16) * 1rem);
+  border-radius: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textBox {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+.title {
+  font-weight: 600;
+  font-size: calc((13 / 16) * 1rem);
+  margin-bottom: 0.3rem;
+}
+
+.quantity {
+  font-weight: 600;
+  color: var(--red);
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.unitPrice,
+.totalPrice {
+  font-size: calc((14 / 16) * 1rem);
+}
+
+.unitPrice {
+  color: var(--rose-500);
+}
+
+.totalPrice {
+  font-weight: 600;
+  color: var(--rose-900);
+}

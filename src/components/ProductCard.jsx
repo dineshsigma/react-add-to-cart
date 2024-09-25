@@ -19,7 +19,7 @@ function ProductCard({ item }) {
           <img
             className={styles.productImage}
             src={item.image.mobile}
-            alt="Waffle with Berries"
+            alt={item.name}
           />
         </picture>
         <AddToCartButton quantity={item.quantity} name={item.name} />
