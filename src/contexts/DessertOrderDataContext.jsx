@@ -52,7 +52,15 @@ function useDessertOrderData() {
 function reducer(state, action) {
   switch (action.type) {
     case "confirmOrder":
-      return { ...state, orderConfirmed: !state.orderConfirmed };
+      return { ...state, orderConfirmed: true };
+    case "startNewOrder":
+      return {
+        ...state,
+        orderConfirmed: false,
+        items: state.items.map((item) => {
+          return { ...item, quantity: 0 };
+        }),
+      };
     case "incrementItem":
       return {
         ...state,

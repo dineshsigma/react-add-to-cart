@@ -34,7 +34,7 @@ function Modal() {
       </div>
       <Button
         text="Start New Order"
-        onClick={() => dispatch({ type: "confirmOrder" })}
+        onClick={() => dispatch({ type: "startNewOrder" })}
       />
     </div>
   );
