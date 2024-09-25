@@ -1,5 +1,7 @@
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
+import Overlay from "./components/Overlay";
+import Modal from "./components/Modal";
 
 import { DessertOrderDataProvider } from "./contexts/DessertOrderDataContext";
 
@@ -13,6 +15,9 @@ function App() {
         <ProductList />
         <Cart />
       </div>
+      <Overlay>
+        <Modal />
+      </Overlay>
     </DessertOrderDataProvider>
   );
 }
