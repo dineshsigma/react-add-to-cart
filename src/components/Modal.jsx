@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 
 import IconOrderConfirmed from "../assets/images/IconOrderConfirmed.svg";
+import Button from "./Button";
 
 import styles from "./Modal.module.css";
 
+import { useDessertOrderData } from "../contexts/DessertOrderDataContext";
+
 function Modal({ items }) {
+  const { dispatch } = useDessertOrderData();
   return (
     <div className={styles.modal}>
       <IconOrderConfirmed className={styles.checkMarkImage} />
@@ -13,6 +17,10 @@ function Modal({ items }) {
       <div className={styles.confirmedCart}>
         <p>Tiramisu</p>
       </div>
+      <Button
+        text="Start New Order"
+        onClick={() => dispatch({ type: "confirmOrder" })}
+      />
     </div>
   );
 }

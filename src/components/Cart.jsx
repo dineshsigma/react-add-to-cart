@@ -1,6 +1,7 @@
 import CartItem from "./CartItem";
 import IconCarbonNeutral from "../assets/images/IconCarbonNeutral.svg";
 import EmptyCartIcon from "../assets/images/EmptyCart.svg";
+import Button from "./Button";
 
 import styles from "./Cart.module.css";
 
@@ -38,12 +39,10 @@ function Cart() {
               This is a <strong>carbon-neutral</strong> delivery
             </p>
           </div>
-          <button
+          <Button
+            text="Confirm Order"
             onClick={() => dispatch({ type: "confirmOrder" })}
-            className={styles.confirmBtn}
-          >
-            Confirm Order
-          </button>
+          />
         </>
       ) : (
         <div className={styles.emptyCartContainer}>

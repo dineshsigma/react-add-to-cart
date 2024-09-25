@@ -44,21 +44,6 @@
   margin-right: 0.4rem;
 }
 
-.confirmBtn {
-  background-color: var(--red);
-  color: var(--rose-50);
-  font-weight: 600;
-  width: 100%;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 999rem;
-  transition: background-color 0.3s;
-}
-
-.confirmBtn:hover {
-  background-color: hsl(14, 86%, 30%);
-}
-
 .emptyCartContainer {
   padding: 2rem 0 1rem;
   font-size: calc((14 / 16) * 1rem);
