@@ -25,6 +25,11 @@
   font-weight: 600;
   font-size: calc((13 / 16) * 1rem);
   margin-bottom: 0.3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .quantity {
