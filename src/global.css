@@ -65,6 +65,7 @@ h2 {
 
 button {
   cursor: pointer;
+  color: var(--rose-900);
 }
 
 svg {
