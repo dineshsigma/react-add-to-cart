@@ -62,9 +62,11 @@ function reducer(state, action) {
         }),
       };
     case "incrementItem":
+      console.log(action.payload);
       return {
         ...state,
         items: state.items.map((item) => {
+          console.log(item.name);
           if (item.name === action.payload) {
             return { ...item, quantity: item.quantity++ };
           } else {
