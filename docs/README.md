@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [https://github.com/josh76543210/Frontend-Mentor---Product-list-with-cart-solution---React](https://github.com/josh76543210/Frontend-Mentor---Product-list-with-cart-solution---React)
+- Live Site URL: [https://josh76543210-fm-product-list-cart.netlify.app/](https://josh76543210-fm-product-list-cart.netlify.app/)
 
 ## My process
 
