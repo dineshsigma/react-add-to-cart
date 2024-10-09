@@ -5,7 +5,6 @@ import AddToCartButton from "./AddToCartButton";
 import styles from "./ProductCard.module.css";
 
 function ProductCard({ item }) {
-  console.log(item);
   return (
     <div>
       <div className={styles.productImageContainer}>

@@ -5,10 +5,9 @@ import importData from "../assets/data/data.json";
 
 // initial state of the application using the imported item data from the JSON file
 const initialState = {
-  items: [...importData.map((x) => ({ ...x, quantity: 1 }))],
+  items: [...importData.map((x) => ({ ...x, quantity: 0 }))],
   orderConfirmed: false,
 };
-console.log(initialState);
 
 // create context for components
 const DessertOrderDataContext = createContext(undefined);
@@ -62,11 +61,9 @@ function reducer(state, action) {
         }),
       };
     case "incrementItem":
-      console.log(action.payload);
       return {
         ...state,
         items: state.items.map((item) => {
-          console.log(item.name);
           if (item.name === action.payload) {
             return { ...item, quantity: ++item.quantity };
           } else {

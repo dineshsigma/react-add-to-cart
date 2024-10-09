@@ -8,9 +8,8 @@ import styles from "./Cart.module.css";
 import { useDessertOrderData } from "../contexts/DessertOrderDataContext";
 
 function Cart() {
-  const { dispatch, orderConfirmed, items } = useDessertOrderData();
+  const { dispatch, items } = useDessertOrderData();
 
-  console.log(orderConfirmed);
   const totalItems = items.filter((item) => item.quantity != 0).length;
 
   return (
