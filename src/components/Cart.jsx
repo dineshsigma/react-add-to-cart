@@ -18,11 +18,13 @@ function Cart() {
       <h2 className={styles.title}>Your Cart ({totalItems})</h2>
       {totalItems ? (
         <>
-          {items
-            .filter((item) => item.quantity != 0)
-            .map((item) => (
-              <CartItem item={item} key={item.name} />
-            ))}
+          <ul>
+            {items
+              .filter((item) => item.quantity != 0)
+              .map((item) => (
+                <CartItem item={item} key={item.name} />
+              ))}
+          </ul>
           <div className={styles.totalPrice}>
             <p>Order Total</p>
             <p>

@@ -4,7 +4,7 @@ import styles from "./ConfirmedItem.module.css";
 
 function ConfirmedItem({ item }) {
   return (
-    <div className={styles.confirmedItem}>
+    <li className={styles.confirmedItem}>
       <img src={item.image.thumbnail} alt={item.name} />
       <div className={styles.textBox}>
         <h3 className={styles.title}>{item.name}</h3>
@@ -16,7 +16,7 @@ function ConfirmedItem({ item }) {
       <p className={styles.totalPrice}>
         ${(item.price * item.quantity).toFixed(2)}
       </p>
-    </div>
+    </li>
   );
 }
 ConfirmedItem.propTypes = {

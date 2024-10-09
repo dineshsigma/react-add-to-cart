@@ -16,11 +16,13 @@ function Modal() {
       <h2>Order Confirmed</h2>
       <p className={styles.subTitle}>We hope you enjoy your food!</p>
       <div className={styles.confirmedCart}>
-        {items
-          .filter((item) => item.quantity != 0)
-          .map((item) => (
-            <ConfirmedItem item={item} key={item.name} />
-          ))}
+        <ul>
+          {items
+            .filter((item) => item.quantity != 0)
+            .map((item) => (
+              <ConfirmedItem item={item} key={item.name} />
+            ))}
+        </ul>
         <div className={styles.totalPrice}>
           <p>Order Total</p>
           <p>

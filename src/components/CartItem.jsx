@@ -10,7 +10,7 @@ function CartItem({ item }) {
   const { dispatch } = useDessertOrderData();
 
   return (
-    <div className={styles.cartItem}>
+    <li className={styles.cartItem}>
       <div>
         <h3 className={styles.title}>{item.name}</h3>
         <p>
@@ -27,7 +27,7 @@ function CartItem({ item }) {
       >
         <IconRemoveItem />
       </button>
-    </div>
+    </li>
   );
 }
 CartItem.propTypes = {
