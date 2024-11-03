@@ -2,6 +2,7 @@ import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import Overlay from "./components/Overlay";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 
 import { DessertOrderDataProvider } from "./contexts/DessertOrderDataContext";
 
@@ -15,6 +16,7 @@ function App() {
         <ProductList />
         <Cart />
       </div>
+      <Footer />
       <Overlay>
         <Modal />
       </Overlay>
