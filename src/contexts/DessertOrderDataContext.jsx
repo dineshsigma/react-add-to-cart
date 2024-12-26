@@ -65,7 +65,7 @@ function reducer(state, action) {
         ...state,
         items: state.items.map((item) => {
           if (item.name === action.payload) {
-            return { ...item, quantity: ++item.quantity };
+            return { ...item, quantity: item.quantity++ };
           } else {
             return item;
           }
@@ -76,7 +76,7 @@ function reducer(state, action) {
         ...state,
         items: state.items.map((item) => {
           if (item.name === action.payload) {
-            return { ...item, quantity: --item.quantity };
+            return { ...item, quantity: item.quantity-- };
           } else {
             return item;
           }

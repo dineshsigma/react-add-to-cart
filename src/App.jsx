@@ -1,27 +1,48 @@
-import ProductList from "./components/ProductList";
-import Cart from "./components/Cart";
-import Overlay from "./components/Overlay";
+import React, { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Products from "./pages/Products";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Checkout from "./components/CheckOut";
 import Modal from "./components/Modal";
-import Footer from "./components/Footer";
+import OrderList from "./components/OrderSummaryPage";
+import Home from "./pages/Home";
 
-import { DessertOrderDataProvider } from "./contexts/DessertOrderDataContext";
+// Function to check if the user is authenticated
+const isAuthenticated = () => {
+  return localStorage.getItem("accessToken") !== null; // Check for access token
+};
 
-import "./global.css";
-import "./reset.css";
+export default function App() {
+  const [authenticated, setAuthenticated] = useState(isAuthenticated());
 
-function App() {
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setAuthenticated(isAuthenticated());
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, [authenticated]);
+
   return (
-    <DessertOrderDataProvider>
-      <div className="app-container">
-        <ProductList />
-        <Cart />
-      </div>
-      <Footer />
-      <Overlay>
-        <Modal />
-      </Overlay>
-    </DessertOrderDataProvider>
+    <div className="App">
+      <Router>
+        {authenticated && <Navbar />}
+        <Routes>
+          <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
+          <Route path="/signup" element={<SignUp />} />
+          {/* Protected Routes */}
+          <Route path="/home" element={authenticated ? <Home /> : <Navigate to="/login" />} />
+          <Route path="/products" element={authenticated ? <Products /> : <Navigate to="/login" />} />
+          <Route path="/checkout" element={authenticated ? <Checkout /> : <Navigate to="/login" />} />
+          <Route path="/confirm-order" element={authenticated ? <Modal /> : <Navigate to="/login" />} />
+          <Route path="/order-summary" element={authenticated ? <OrderList /> : <Navigate to="/login" />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
-
-export default App;

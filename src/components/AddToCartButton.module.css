@@ -15,7 +15,7 @@
 
 .button {
   background-color: var(--rose-50);
-  border: 0.06rem var(--rose-900) solid;
+  border: 0.06rem var(--red) solid;
 
   display: flex;
   gap: 0.5rem;
@@ -29,7 +29,7 @@
 .buttonActive {
   background-color: var(--red);
   border: 0.06rem var(--red) solid;
-  color: var(--rose-50);
+  color: var(--red);
   width: 10rem;
 
   display: flex;
