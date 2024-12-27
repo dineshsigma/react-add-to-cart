@@ -8,6 +8,8 @@ import Checkout from "./components/CheckOut";
 import Modal from "./components/Modal";
 import OrderList from "./components/OrderSummaryPage";
 import Home from "./pages/Home";
+import Order from "./components/Orders";
+import Orders from "./components/Orders";
 
 // Function to check if the user is authenticated
 const isAuthenticated = () => {
@@ -41,6 +43,7 @@ export default function App() {
           <Route path="/checkout" element={authenticated ? <Checkout /> : <Navigate to="/login" />} />
           <Route path="/confirm-order" element={authenticated ? <Modal /> : <Navigate to="/login" />} />
           <Route path="/order-summary" element={authenticated ? <OrderList /> : <Navigate to="/login" />} />
+          <Route path="/orders" element={authenticated ? <Orders /> : <Navigate to="/login" />} />
         </Routes>
       </Router>
     </div>
