@@ -11,15 +11,15 @@ import { useDessertOrderData } from "../contexts/DessertOrderDataContext";
 function Modal() {
   const { items, dispatch } = useDessertOrderData();
   const [formData, setFormData] = useState({
-      name: '',
-      email: '',
+      name: localStorage.getItem("name"),
+      email: localStorage.getItem("email"),
       street: '',
       area: '',
       city: '',
       state: '',
       pincode: ''
     });
-     const [phoneNo, setPhoneNo] = useState('');
+     const [phoneNo, setPhoneNo] = useState(localStorage.getItem("mobile"));
       const [bajajemi, setBajajemi] = useState(false); // Placeholder for bajajemi state
       const [states] = useState(['State 1', 'State 2', 'State 3']); // Example states
       const [valid, setValid] = useState(true); // Placeholder for form validation
@@ -54,6 +54,7 @@ function Modal() {
                   label="Name"
                   required
                   fullWidth
+                  disabled
                 />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -64,6 +65,7 @@ function Modal() {
                   label="E-mail"
                   required
                   fullWidth
+                  disabled
                 />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -72,7 +74,7 @@ function Modal() {
                   type="number"
                   value={phoneNo}
                   onChange={(e) => setPhoneNo(e.target.value)}
-                 // disabled
+                 disabled
                   fullWidth
                 />
               </Grid>
