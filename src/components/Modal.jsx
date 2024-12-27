@@ -5,19 +5,28 @@ import Button from "./Button";
 import ConfirmedItem from "./ConfirmedItem";
 import { Container, TextField, Grid, Typography, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
 import styles from "./Modal.module.css";
+import axios from 'axios';
+import { notify } from "./toast";
+import { ToastContainer } from "react-toastify";
 
 import { useDessertOrderData } from "../contexts/DessertOrderDataContext";
+
+let baseUrl = 'http://localhost:3001';
+
+let name = localStorage.getItem("name");
+let email = localStorage.getItem("email")
 
 function Modal() {
   const { items, dispatch } = useDessertOrderData();
   const [formData, setFormData] = useState({
-      name: localStorage.getItem("name"),
-      email: localStorage.getItem("email"),
+      name: name,
+      email: email,
       street: '',
       area: '',
       city: '',
       state: '',
-      pincode: ''
+      pincode: '',
+      order_items : []
     });
      const [phoneNo, setPhoneNo] = useState(localStorage.getItem("mobile"));
       const [bajajemi, setBajajemi] = useState(false); // Placeholder for bajajemi state
@@ -29,9 +38,37 @@ function Modal() {
         setFormData({ ...formData, [name]: value });
       };
     
-      const handleSubmit = () => {
-        console.log(formData);
-        setShowOverlay(true); 
+      const handleSubmit = async () => {
+        // Filter items where quantity is not 0 and update formData
+        const filteredItems = items.filter((item) => item.quantity !== 0);
+        
+        // Update the order_items array in formData
+        setFormData(prevState => ({
+          ...prevState,
+          order_items: filteredItems,
+        }));
+        setShowOverlay(true);
+        const accessToken = localStorage.getItem('accessToken');
+        const urlApi = `${baseUrl}/api/v1/order/createOrders`;
+        const response = await axios.post(
+          urlApi, 
+          {
+            ...formData,
+            order_items: filteredItems
+          }, 
+          {
+            headers: {
+              "token": `${accessToken}`, 
+              'Content-Type': 'application/json',
+            }
+          }
+        );
+        console.log("response", response);
+        if(response.data.status){
+          notify("Your Order is Created Successfully","success");
+        }else{
+          notify("Your Order is  Not Created");
+        }
       };
   return (
 
@@ -168,6 +205,7 @@ function Modal() {
     handleSubmit(); // Call the handleSubmit function
   }}
 />
+<ToastContainer />
     </div>
     </>
   );
